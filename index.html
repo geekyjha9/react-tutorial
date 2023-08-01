@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <h1>Hello World from HTML</h1>
 
     <div id="root"></div>
 
@@ -20,15 +20,19 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
 
-
-    
-
-    <script>
+    <!-- <script>
       const Heading = document.createElement("h1");
       Heading.innerHTML = "Hello World from JS";
 
       const root = document.getElementById("root");
       root.appendChild(Heading);
+    </script> -->
+
+    <script>
+      const content = React.createElement("h1", {}, "Hello World from React!!");
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(content);
     </script>
   </body>
 </html>
